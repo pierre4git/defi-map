@@ -1,0 +1,20 @@
+{
+  "name": "chain-atlas",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "snapshot": "node scripts/snapshot.mjs"
+  },
+  "devDependencies": {
+    "@types/d3": "^7.4.3",
+    "typescript": "~7.0.2",
+    "vite": "^8.3.5"
+  },
+  "dependencies": {
+    "d3": "^7.9.0"
+  }
+}
