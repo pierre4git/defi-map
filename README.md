@@ -7,14 +7,11 @@ Click a chain to zoom into its protocols, grouped by category. Search finds a ch
 ## Run locally
 
 ```bash
-npm install
-npm run snapshot   # optional offline fallback
+npm ci
 npm run dev
 ```
 
 The Vite dev server listens on [http://127.0.0.1:43147](http://127.0.0.1:43147).
-
-`npm install` resolves dependencies from `package.json`. After the first install you can refresh the committed snapshot with `npm run snapshot` if you want the app to keep working when DefiLlama is unreachable.
 
 ## How data is loaded
 
@@ -26,7 +23,7 @@ At runtime the app fetches three public DefiLlama endpoints (all CORS-open):
 
 `bridges.llama.fi` currently returns HTTP 402, so bridge volume comes from the overview endpoint instead. If a live fetch fails, the app falls back to `public/data/snapshot.json`.
 
-Refresh the snapshot:
+Refresh the committed snapshot:
 
 ```bash
 npm run snapshot
@@ -37,7 +34,7 @@ CEX and “Chain” protocol rows are dropped so the dive-in view stays about da
 ## Build / deploy as a static site
 
 ```bash
-npm install
+npm ci
 npm run build
 ```
 
